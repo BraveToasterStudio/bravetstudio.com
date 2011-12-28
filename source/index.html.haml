@@ -1,0 +1,96 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => "en" }
+  <!--<![endif]-->
+  %head
+    %meta{ :charset => "utf-8" }/
+
+    -# Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    -# Remove this if you use the .htaccess
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+
+    %title Brave Toaster Studio
+    %meta{ :name => "description", :content => "" }/
+    %meta{ :name => "author", :content => "Roman Dolgiy" }/
+
+    -# Mobile viewport optimized: j.mp/bplateviewport
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+
+    -# Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons
+
+    -# CSS: implied media="all"
+    %link{ :href => "/css/bootstrap.css?v=1", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "/css/site.css?v=1", :media => "all", :rel => "stylesheet" }/
+
+    -# All JavaScript at the bottom, except for Modernizr and Respond.
+    -# Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+    %script{ :src => "/js/modernizr.js" }
+    %script{ :src => "/js/respond.js" }
+
+  %body
+    .topbar
+      .fill
+        .container
+          %a.brand{:href => "#"} Brave Toaster Studio
+          %ul.nav
+            %li.active
+              %a{:href => "#"} About
+            / %li
+            /   %a{:href => "#about"} About
+            / %li
+            /   %a{:href => "#contact"} Contact
+    .container
+      / Main hero unit for a primary marketing message or call to action
+      .hero-unit#info
+        %h1 Roman Dolgiy
+        %br
+        %p
+          An energetic and experienced Python Developer with strong system administration skills. Skilled in Data Modeling, Object-Oriented Development and the MVC architecture. Driven to deliver functional, polished applications using the latest technologies.
+
+        %p
+          Able to manage small team. Familiar with Agile Methodology, like to automate everything (testing, deployment, server configuration, Continuous Integration).
+
+        %p Django addicted. Love open source.
+
+        / %p
+        /   Last few months I was also working as a frontend developer using latest technologies such as Haml, Compass/Sass, CoffeeScript, Backbone.js.
+
+        %p
+          %a{ :href => "https://github.com/t0ster" } Github profile
+          %br
+          %a{ :href => "http://ua.linkedin.com/in/t0ster" } LinkedIn profile
+        %p
+          %a.btn.primary.large{ :href => "https://www.odesk.com/users/~~3323ae14fbd2b8ac" } Hire me on oDesk »
+        %p
+          %a.btn.primary.large{ :href => "http://dl.dropbox.com/u/407968/CV.pdf" }  Actual CV »
+      / Example row of columns
+      / .row
+      /   .span16
+      /     %h2 Heading
+      /     %p Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      /     %p
+      /       %a.btn{:href => "#"} View details »
+      %footer
+        %p © Brave Toaster Studio 2011
+
+    -#
+      Javascript at the bottom for fast page loading
+      Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" }
+    :javascript
+      window.jQuery || document.write("<script src='js/jquery.js'>\x3C/script>")
+
+    -# %script{ :src => "js/plugins.js?v=1" }
+    -# %script{ :src => "js/script.js?v=1" }
+
+    -# -#  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+    -# -#  change the UA-XXXXX-X to be your site's ID
+    -# :javascript
+    -#   var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
+    -#   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    -#   g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    -#   s.parentNode.insertBefore(g,s)}(document,"script"));
