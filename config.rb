@@ -21,7 +21,9 @@
 
 # CoffeeScript filters in Haml
 # First: gem install coffee-filter
-# require 'coffee-filter'
+require 'coffee-filter'
+
+mime_type "appcache", "text/cache-manifest"
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
@@ -62,7 +64,7 @@
 set :css_dir, "css"
 
 # Change the JS directory
-# set :js_dir, "alternative_js_directory"
+set :js_dir, "js"
 
 # Change the images directory
 # set :images_dir, "alternative_image_directory"

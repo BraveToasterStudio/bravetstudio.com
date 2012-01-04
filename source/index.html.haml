@@ -4,7 +4,8 @@
 <!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if gt IE 8]><!-->
-%html.no-js{ :lang => "en" }
+/ %html.no-js{ :lang => "en", :manifest => "app.appcache" }
+%html.no-js{ :lang => "en"}
   <!--<![endif]-->
   %head
     %meta{ :charset => "utf-8" }/
@@ -39,34 +40,14 @@
           %ul.nav
             %li.active
               %a{:href => "#"} About
-            / %li
-            /   %a{:href => "#about"} About
-            / %li
-            /   %a{:href => "#contact"} Contact
+            %li
+              %a{:href => "#privacy"} Privacy
+            %li
+              %a{:href => "#refund"} Refund
     .container
       / Main hero unit for a primary marketing message or call to action
       .hero-unit#info
-        %h1 Roman Dolgiy
-        %br
-        %p
-          An energetic and experienced Python Developer with strong system administration skills. Skilled in Data Modeling, Object-Oriented Development and the MVC architecture. Driven to deliver functional, polished applications using the latest technologies.
-
-        %p
-          Able to manage small team. Familiar with Agile Methodology, like to automate everything (testing, deployment, server configuration, Continuous Integration).
-
-        %p Django addicted. Love open source.
-
-        / %p
-        /   Last few months I was also working as a frontend developer using latest technologies such as Haml, Compass/Sass, CoffeeScript, Backbone.js.
-
-        %p
-          %a{ :href => "https://github.com/t0ster" } Github profile
-          %br
-          %a{ :href => "http://ua.linkedin.com/in/t0ster" } LinkedIn profile
-        %p
-          %a.btn.primary.large{ :href => "https://www.odesk.com/users/~~3323ae14fbd2b8ac" } Hire me on oDesk »
-        %p
-          %a.btn.primary.large{ :href => "http://dl.dropbox.com/u/407968/CV.pdf" }  Actual CV »
+        Loading...
       / Example row of columns
       / .row
       /   .span16
@@ -84,6 +65,12 @@
     :javascript
       window.jQuery || document.write("<script src='js/jquery.js'>\x3C/script>")
 
+    %script{ :src => "js/hogan.js" }
+    %script{ :src => "js/underscore.js" }
+    %script{ :src => "js/json2.js" }
+    %script{ :src => "js/backbone.js" }
+    %script{ :src => "js/app.js?v=1" }
+
     -# %script{ :src => "js/plugins.js?v=1" }
     -# %script{ :src => "js/script.js?v=1" }
 
@@ -93,3 +80,5 @@
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
       g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
       s.parentNode.insertBefore(g,s)}(document,"script"));
+
+    .templates
