@@ -67,8 +67,6 @@ set :css_dir, "css"
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
 
-disable :layout
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
