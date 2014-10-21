@@ -39,10 +39,10 @@
           %ul.nav
             %li.active
               %a{:href => "#"} About
-            %li
-              %a{:href => "/trening.html"} Тренинг
             / %li
-            /   %a{:href => "#about"} About
+            /   %a{:href => "/trening.html"} Тренинг
+            %li
+              %a{:href => "#portfolio"} Portfolio
             / %li
             /   %a{:href => "#contact"} Contact
     .container
@@ -50,24 +50,25 @@
       .hero-unit#info
         %h1 Roman Dolgiy
         %br
+        .center
+          %img{ :src => "https://avatars2.githubusercontent.com/u/219471?v=2&s=460" }
         %p
-          Have more than 5 years experience in web development. Worked extensively in data modeling, object-oriented development, and MVC architectures. Above all, driven to deliver functional, polished applications, built with the latest technologies.
+          Have more than 5 years experience in web development. Worked extensively in data modeling, object-oriented development, and MVC architectures. Above all, driven to deliver functional, polished applications, built with the latest technologies. Love open source.
 
-        %p Love open source.
+        .center
+          / %p
+          /   Last few months I was also working as a frontend developer using latest technologies such as Haml, Compass/Sass, CoffeeScript, Backbone.js.
 
-        / %p
-        /   Last few months I was also working as a frontend developer using latest technologies such as Haml, Compass/Sass, CoffeeScript, Backbone.js.
-
-        %p
-          %a{ :href => "https://github.com/t0ster" } Github profile
-          %br
-          %a{ :href => "http://ua.linkedin.com/in/t0ster" } LinkedIn profile
-        %p
-          %a.btn.primary.large{ :href => "https://www.odesk.com/o/profiles/users/_~01ee526c12992f4e21/" } Hire me on oDesk »
-        %p
-          %a.btn.primary.large{ :href => "http://www.toptal.com/resume/roman-dolgiy" } Toptal profile »
-        %p
-          %a.btn.primary.large{ :href => "http://dl.dropbox.com/u/407968/CV.pdf" }  Actual CV »
+          %p
+            %a.link{ :href => "https://github.com/t0ster" } Github profile
+            %br
+            %a.link{ :href => "http://ua.linkedin.com/in/t0ster" } LinkedIn profile
+          %p
+            %a.btn.primary.large{ :href => "https://www.odesk.com/o/profiles/users/_~01ee526c12992f4e21/" } Hire me on oDesk »
+          / %p
+          /   %a.btn.primary.large{ :href => "http://www.toptal.com/resume/roman-dolgiy" } Toptal profile »
+          %p
+            %a.btn.primary.large{ :href => "http://dl.dropbox.com/u/407968/CV.pdf" }  Actual CV »
       / Example row of columns
       / .row
       /   .span16
@@ -76,7 +77,7 @@
       /     %p
       /       %a.btn{:href => "#"} View details »
       %footer
-        %p © Brave Toaster Studio 2013
+        %p © Brave Toaster Studio 2014
 
     -#
       Javascript at the bottom for fast page loading
